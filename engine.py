@@ -4,6 +4,18 @@ from random import randrange as R
 def f(e):
   af = e.target.id
   v = int(e.target.value)
+  if af == 'pp1':
+    if v == a1+b1:
+      e.target.disabled = True
+  if af == 'pp2':
+    if v == a2+b2:
+      e.target.disabled = True
+  if af == 'pm1':
+    if v == a1-b1:
+      e.target.disabled = True
+  if af == 'pm2':
+    if v == a2-b2:
+      e.target.disabled = True
   if af == 'p11':
     if v == c*(a1+b1):
       e.target.disabled = True
@@ -51,8 +63,12 @@ else: _d = str(d)
 _c = str(c)
 D <= H.H1("Vektorok - 11c")
 C = H.DIV(Class="f f1")
-C <= H.DIV(f"Legyen ") <= [H.SPAN("$$\\vec{a}=("+_a1+","+_a2+")$$"), " és ", H.SPAN("$$\\vec{b}=("+_b1+","+_b2+")$$")]
+C <= H.DIV(f"Legyen ") <= [H.SPAN("$$\\vec{a}=("+_a1+","+_a2+")$$"), " és ", H.SPAN("$$\\vec{b}=("+_b1+","+_b2+").$$")]
 F = H.DIV(f"Határozza meg az alábbi helyvektorok koordinátáit:")
+F <= H.DIV(H.SPAN("$$\\vec{a}+\\vec{b}=($$") <= 
+      [H.INPUT(id='pp1', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='pp2', type='number').bind("input", f)]) <= "$$)$$"
+F <= H.DIV(H.SPAN("$$\\vec{a}-\\vec{b}=($$") <= 
+      [H.INPUT(id='pm1', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='pm2', type='number').bind("input", f)]) <= "$$)$$"
 F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}+"+_c+"\\vec{b}=($$") <= 
       [H.INPUT(id='p11', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p12', type='number').bind("input", f)]) <= "$$)$$"
 F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}-"+_d+"\\vec{b}=($$")  <= 
