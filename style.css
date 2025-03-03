@@ -1,11 +1,17 @@
 h1 {
-  padding-top: 25px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  line-height: 1px;
 }
 body {
+  padding: 0px;
+  margin: 0px;
   text-align: center;
   background-color: antiquewhite;
   text-shadow: 1px 1px 3px gray;
   font-size: 20px;
+  line-height: 1px;
 }
 input {
   width: 70px;
@@ -21,7 +27,19 @@ span.pv {
 }
 div.f {
   color: blue;
+  margin-top: 0px;
+}
+div {
+
 }
 input:disabled {
   background-color: aquamarine;
+}
+span.psz {
+  color: red;
+}
+div.fel {
+  font-family:  'Arial Narrow';
+  font-size: 16px;
+  display: inline-block;
 }
