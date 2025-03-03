@@ -53,10 +53,15 @@ D <= H.H1("Vektorok - 11c")
 C = H.DIV(Class="f f1")
 C <= H.DIV(f"Legyen ") <= [H.SPAN("$$\\vec{a}=("+_a1+","+_a2+")$$"), " és ", H.SPAN("$$\\vec{b}=("+_b1+","+_b2+")$$")]
 F = H.DIV(f"Határozza meg az alábbi helyvektorok koordinátáit:")
-F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}+"+_c+"\\vec{b}=($$") <= [H.INPUT(id='p11').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p12').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}-"+_d+"\\vec{b}=($$")  <= [H.INPUT(id='p21').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p22').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_d+"\\vec{a}-"+_cd+"\\vec{b}=($$")  <= [H.INPUT(id='p31').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p32').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}+"+_d+"\\vec{b})=($$")  <= [H.INPUT(id='p41').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p42').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}-"+_d+"\\vec{b})=($$") <= [H.INPUT(id='p51').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p52').bind("input", f)]) <= "$$)$$"
+F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}+"+_c+"\\vec{b}=($$") <= 
+      [H.INPUT(id='p11', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p12', type='number').bind("input", f)]) <= "$$)$$"
+F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}-"+_d+"\\vec{b}=($$")  <= 
+      [H.INPUT(id='p21', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p22', type='number').bind("input", f)]) <= "$$)$$"
+F <= H.DIV(H.SPAN("$$"+_d+"\\vec{a}-"+_cd+"\\vec{b}=($$")  <= 
+      [H.INPUT(id='p31', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p32', type='number').bind("input", f)]) <= "$$)$$"
+F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}+"+_d+"\\vec{b})=($$")  <= 
+      [H.INPUT(id='p41', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p42', type='number').bind("input", f)]) <= "$$)$$"
+F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}-"+_d+"\\vec{b})=($$") <= 
+      [H.INPUT(id='p51', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p52', type='number').bind("input", f)]) <= "$$)$$"
 C <= F
 D <= C
