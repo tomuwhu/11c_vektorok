@@ -19,11 +19,14 @@
 
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
-        onload="setTimeout(() => renderMathInElement(document.body), 1000)"></script>
+        onload="setTimeout(() => {
+          renderMathInElement(document.body)
+          document.getElementById('body').style.display='block'
+        }, 1000);"></script>
   <title>Vektorok</title>
   
 </head>
-<body>
+<body id="body" style="display:none;">
   
 </body>
 </html>
