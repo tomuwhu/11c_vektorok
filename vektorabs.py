@@ -4,17 +4,18 @@ psz = 0
 def f(e):
   global psz, F, HSZ, _er
   psz += 1
-  if psz > 10:
+  if psz > 5:
     F.clear()
     F <= H.SPAN("Túl sok próbálkozás!", Class="psz")
   HSZ.clear()
-  HSZ <= 10 - psz
+  HSZ <= 5 - psz
   af = e.target.id
   if e.target.value == '': return
   v = int(e.target.value)
   if af == 'pp1':
     if v == _er:
       e.target.disabled = True
+      D <= H.A("Kiskrokodil", href="https://cukisag.blog.hu/media/image/Erika/20110526/kis%20nilusi%20krokodil02%20foto%20Bagosi%20Zoltan.JPG")
 phlist=[
   [3,4,5],
   [5,12,13],
@@ -37,12 +38,12 @@ _er = szhv[2] * sz
 
 D <= H.H1("Vektorok - 11c") 
 
-HSZ = H.SPAN(10, Class="psz") 
+HSZ = H.SPAN(5, Class="psz") 
 C = H.DIV(Class="f f1")
 C <= H.DIV(f"Koordinátáival adott két pont a síkon:") 
 C <= H.DIV([H.SPAN("$$P_1=("+_p11+","+_p12+")$$"), " és ", H.SPAN("$$P_2=("+_p21+","+_p22+").$$")], Class="p1p2")
 F = H.DIV(["Határozza meg a két pont távolságát! ($$|\\vec{P_1P_2}|$$)! ", HSZ, H.HR()], Class="fel")
 F <= H.DIV(H.SPAN("$$|\\vec{P_1P_2}|=$$") <= 
-      H.INPUT(id='pp1', type='number').bind("input", f)) + _er
+      H.INPUT(id='pp1', type='number').bind("input", f))
 C <= F
 D <= C

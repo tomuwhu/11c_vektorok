@@ -1,8 +1,9 @@
 from browser import document as D, html as H
 from random import randrange as R
 psz = 0
+vsz = 0
 def f(e):
-  global psz, F, HSZ
+  global psz, F, HSZ, vsz
   psz += 1
   if psz > 35:
     F.clear()
@@ -15,45 +16,61 @@ def f(e):
   if af == 'pp1':
     if v == a1+b1:
       e.target.disabled = True
+      vsz += 1
   if af == 'pp2':
     if v == a2+b2:
       e.target.disabled = True
+      vsz += 1
   if af == 'pm1':
     if v == a1-b1:
       e.target.disabled = True
+      vsz += 1
   if af == 'pm2':
     if v == a2-b2:
       e.target.disabled = True
+      vsz += 1
   if af == 'p11':
     if v == c*(a1+b1):
       e.target.disabled = True
+      vsz += 1
   if af == 'p12':
     if v == c*(a2+b2):
       e.target.disabled = True
+      vsz += 1
   if af == 'p21':
     if v == c*a1-d*b1:
       e.target.disabled = True
+      vsz += 1
   if af == 'p22':
     if v == c*a2-d*b2:
       e.target.disabled = True
+      vsz += 1
   if af == 'p31':
     if v == d*a1-c*d*b1:
       e.target.disabled = True
+      vsz += 1
   if af == 'p32':
     if v == d*a2-c*d*b2:
       e.target.disabled = True
+      vsz += 1
   if af == 'p41':
     if v == c*(a1+d*b1):
       e.target.disabled = True
+      vsz += 1
   if af == 'p42':
     if v == c*(a2+d*b2):
       e.target.disabled = True
+      vsz += 1
   if af == 'p51':
     if v == c*(a1-d*b1):
       e.target.disabled = True
+      vsz += 1
   if af == 'p52':
     if v == c*(a2-d*b2):
       e.target.disabled = True
+      vsz += 1
+  if vsz == 1:
+    D <= H.A("Következő feladat", href="/vektorabs.html")
 a1=R(5,9)
 a2=R(1,5)
 b1=R(1,4)
