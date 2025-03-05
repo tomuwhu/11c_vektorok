@@ -89,21 +89,21 @@ _c = str(c)
 HSZ = H.SPAN(35, Class="psz")
 D <= H.H1("Vektorok - 11c") 
 C = H.DIV(Class="f f1")
-C <= H.DIV(f"Legyen ") <= [H.SPAN("$$\\vec{a}=("+_a1+","+_a2+")$$"), " és ", H.SPAN("$$\\vec{b}=("+_b1+","+_b2+").$$")]
+C <= H.DIV(f"Legyen ") <= [H.SPAN("$$\\vec{a}("+_a1+","+_a2+")$$"), " és ", H.SPAN("$$\\vec{b}("+_b1+","+_b2+").$$")]
 F = H.DIV([f"Határozza meg az alábbi helyvektorok koordinátáit! ", HSZ, H.HR()], Class="fel")
-F <= H.DIV(H.SPAN("$$\\vec{a}+\\vec{b}=($$") <= 
+F <= H.DIV(H.SPAN("$$\\vec{a}+\\vec{b}=\\vec{e_1}($$") <= 
       [H.INPUT(id='pp1', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='pp2', type='number').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$\\vec{a}-\\vec{b}=($$") <= 
+F <= H.DIV(H.SPAN("$$\\vec{a}-\\vec{b}=\\vec{e_2}($$") <= 
       [H.INPUT(id='pm1', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='pm2', type='number').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}+"+_c+"\\vec{b}=($$") <= 
+F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}+"+_c+"\\vec{b}=\\vec{e_3}($$") <= 
       [H.INPUT(id='p11', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p12', type='number').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}-"+_d+"\\vec{b}=($$")  <= 
+F <= H.DIV(H.SPAN("$$"+_c+"\\vec{a}-"+_d+"\\vec{b}=\\vec{e_4}($$")  <= 
       [H.INPUT(id='p21', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p22', type='number').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_d+"\\vec{a}-"+_cd+"\\vec{b}=($$")  <= 
+F <= H.DIV(H.SPAN("$$"+_d+"\\vec{a}-"+_cd+"\\vec{b}=\\vec{e_5}($$")  <= 
       [H.INPUT(id='p31', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p32', type='number').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}+"+_d+"\\vec{b})=($$")  <= 
+F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}+"+_d+"\\vec{b})=\\vec{e_6}($$")  <= 
       [H.INPUT(id='p41', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p42', type='number').bind("input", f)]) <= "$$)$$"
-F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}-"+_d+"\\vec{b})=($$") <= 
+F <= H.DIV(H.SPAN("$$"+_c+"(\\vec{a}-"+_d+"\\vec{b})=\\vec{e_7}($$") <= 
       [H.INPUT(id='p51', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='p52', type='number').bind("input", f)]) <= "$$)$$"
 C <= F
 D <= C
