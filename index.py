@@ -89,7 +89,7 @@ _c = str(c)
 HSZ = H.SPAN(35, Class="psz")
 D <= H.H1("Vektorok - 11c") 
 C = H.DIV(Class="f f1")
-C <= H.DIV(f"Legyen ") <= [H.SPAN("$$\\vec{a}("+_a1+","+_a2+")$$"), " és ", H.SPAN("$$\\vec{b}("+_b1+","+_b2+").$$")]
+C <= H.DIV(f"Koordinátáikkal adottak ") <= [H.SPAN("$$\\vec{a}("+_a1+","+_a2+")$$"), " és ", H.SPAN("$$\\vec{b}("+_b1+","+_b2+")$$"), " helyvektorok."]
 F = H.DIV([f"Határozza meg az alábbi helyvektorok koordinátáit! ", HSZ, H.HR()], Class="fel")
 F <= H.DIV(H.SPAN("$$\\vec{a}+\\vec{b}=\\vec{e_1}($$") <= 
       [H.INPUT(id='pp1', type='number').bind("input", f), H.SPAN(";", Class="pv"), H.INPUT(id='pp2', type='number').bind("input", f)]) <= "$$)$$"

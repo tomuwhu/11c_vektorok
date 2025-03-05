@@ -1,6 +1,6 @@
 h1 {
   padding-top: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
   margin-bottom: 0px;
   line-height: 1px;
 }
@@ -10,7 +10,7 @@ body {
   text-align: center;
   background-color: antiquewhite;
   text-shadow: 1px 1px 3px gray;
-  font-size: 20px;
+  font-size: 17px;
 }
 input {
   width: 70px;
