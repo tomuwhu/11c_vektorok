@@ -9,7 +9,8 @@ def f(e):
   psz += 1
   if psz > 15:
     F.clear()
-    F <= H.SPAN("Túl sok próbálkozás!", Class="psz")
+    F2.clear()
+    F2 <= H.SPAN("Túl sok próbálkozás!", Class="psz")
   HSZ.clear()
   HSZ <= 15 - psz
   af = e.target.id
@@ -86,9 +87,9 @@ C <= F <= H.HR()
 
 C <= H.DIV(f"Koordinátáival adott két pont a síkon:") 
 C <= H.DIV([H.SPAN("$$Q_1=("+_q11+","+_q12+")$$"), " és ", H.SPAN("$$Q_2=("+_q21+","+_q22+").$$")], Class="p1p2")
-F = H.DIV(["Határozza meg a két pont távolságát! ($$|\\vec{Q_1Q_2}|$$)! ", HSZ], Class="fel")
-F <= H.DIV(H.SPAN("$$|\\vec{Q_1Q_2}|=$$") <= 
+F2 = H.DIV(["Határozza meg a két pont távolságát! ($$|\\vec{Q_1Q_2}|$$)! ", HSZ], Class="fel")
+F2 <= H.DIV(H.SPAN("$$|\\vec{Q_1Q_2}|=$$") <= 
       H.INPUT(id='pq1', type='number').bind("input", f))# <= _erq
-C <= F
+C <= F2
 D <= C
 
