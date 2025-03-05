@@ -79,14 +79,14 @@ D <= H.H1("Vektorok - 11c")
 HSZ = H.SPAN(15, Class="psz") 
 C = H.DIV(Class="f f1")
 C <= H.DIV(f"Koordinátáival adott két pont a síkon:") 
-C <= H.DIV([H.SPAN("$$P_1=("+_p11+","+_p12+")$$"), " és ", H.SPAN("$$P_2=("+_p21+","+_p22+").$$")], Class="p1p2")
+C <= H.DIV([H.SPAN("$$P_1("+_p11+","+_p12+")$$"), " és ", H.SPAN("$$P_2("+_p21+","+_p22+").$$")], Class="p1p2")
 F = H.DIV(["Határozza meg a két pont távolságát! ($$|\\vec{P_1P_2}|$$)! "], Class="fel")
 F <= H.DIV(H.SPAN("$$|\\vec{P_1P_2}|=$$") <= 
       H.INPUT(id='pp1', type='number').bind("input", f))# <= _er
 C <= F <= H.HR()
 
 C <= H.DIV(f"Koordinátáival adott két pont a síkon:") 
-C <= H.DIV([H.SPAN("$$Q_1=("+_q11+","+_q12+")$$"), " és ", H.SPAN("$$Q_2=("+_q21+","+_q22+").$$")], Class="p1p2")
+C <= H.DIV([H.SPAN("$$Q_1("+_q11+","+_q12+")$$"), " és ", H.SPAN("$$Q_2("+_q21+","+_q22+").$$")], Class="p1p2")
 F2 = H.DIV(["Határozza meg a két pont távolságát! ($$|\\vec{Q_1Q_2}|$$)! ", HSZ], Class="fel")
 F2 <= H.DIV(H.SPAN("$$|\\vec{Q_1Q_2}|=$$") <= 
       H.INPUT(id='pq1', type='number').bind("input", f))# <= _erq
