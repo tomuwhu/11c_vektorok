@@ -70,8 +70,8 @@ def f(e):
     if v == c*(a2-d*b2):
       e.target.disabled = True
       vsz += 1
-  if vsz == 1:
-    D <= H.A("Következő feladat", href="/vektorabs.html")
+  if vsz == 14:
+    D <= H.A("Következő feladat", href="https://tomuwhu.github.io/11c_vektorok/vektorabs.html")
 a1=R(5,9)
 a2=R(1,5)
 b1=R(1,4)
